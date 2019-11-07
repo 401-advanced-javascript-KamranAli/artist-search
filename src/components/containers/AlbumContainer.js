@@ -1,17 +1,16 @@
 import React, { useReducer, useState, useEffect } from 'react';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import Albums from '../albums/Albums';
 import { getAlbums } from '../../services/api-call';
 
 function pageReducer(state, action) {
   switch(action.type) {
     case 'incrementPage':
-      return { page: state.page + 1 };
+      return { ...state, page: action.payload };
     case 'decrementPage':
-      return { page: state.page - 1 };
+      return { ...state, page: action.payload };
     default:
       return state;
-
   }
 }
 
@@ -36,27 +35,16 @@ function findAlbum() {
 export default findAlbum;
 
 
-
-
-
-
-
-
-
-
-
-
-
 // export default class AlbumContainer extends Component {
 
-//   static propTypes = {
-//     match: PropTypes.shape({
-//       params: PropTypes.shape({
-//         id: PropTypes.string.isRequired,
-//         name: PropTypes.string.isRequired
-//       }).isRequired
+// static propTypes = {
+//   match: PropTypes.shape({
+//     params: PropTypes.shape({
+//       id: PropTypes.string.isRequired,
+//       name: PropTypes.string.isRequired
 //     }).isRequired
-//   }
+//   }).isRequired
+// }
 
 //   state = {
 //     albums: [],
