@@ -1,5 +1,5 @@
 import React, { useReducer, useState, useEffect } from 'react';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import Albums from '../albums/Albums';
 import { getAlbums } from '../../services/api-call';
 
@@ -9,39 +9,33 @@ function pageReducer(state, action) {
       return { page: state.page + 1 };
     case 'decrementPage':
       return { page: state.page - 1 };
-    default :
+    default:
       return state;
-    
+
   }
 }
 
-const Set_Album = 'SET_ALBUM'
+function findAlbum() {
+  const [albums, setAlbums] = useState([]);
+  const [page, setPage] = useReducer(pageReducer, { page: 0 });
 
-function albumReducer(state, action) {
-  switch(action.type) {
-    case 
-  }
-}
+  useEffect(() => {
+    if(albums) {
+      getAlbums(albums);
+    }
+  }, [page]);
 
-function findAlbum({ getAlbums }) {
-  const [albums, setAlbums] = useReducer(pageReducer, { page: 0 })
   return (
     <div>
       {/* <Albums albums={albums} id={this.state.albums.id} incrementPage={this.incrementPage} decrementPage={this.decrementPage} name={this.props.match.params.name} /> */}
-      <Albums onClick={() => setAlbums(getAlbums), pageReducer()} />
+      <Albums onClick={() => setAlbums(albums), setPage(page)} />
     </div>
   );
 }
 
-useEffect(() => {
-  const albums = props.match.params.id;
-  if(albums) {
-    getAlbums(albums)
-    .then(albums => {
-      this.setState({ albums });
-    });
-  }
-})
+export default findAlbum;
+
+
 
 
 
@@ -69,12 +63,12 @@ useEffect(() => {
 //     page: 0
 //   }
 
-  componentDidMount() {
-    getAlbums(this.props.match.params.id, this.state.page)
-      .then(albums => {
-        this.setState({ albums });
-      });
-  }
+// componentDidMount() {
+//   getAlbums(this.props.match.params.id, this.state.page)
+//     .then(albums => {
+//       this.setState({ albums });
+//     });
+// }
 
 //   decrementPage = () => {
 //     this.setState(state => ({
@@ -102,6 +96,6 @@ useEffect(() => {
 
 //     const { albums } = this.state;
 
-    
+
 
 // }
