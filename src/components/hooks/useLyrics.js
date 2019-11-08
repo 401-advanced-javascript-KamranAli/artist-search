@@ -1,19 +1,21 @@
 import { useState, useEffect } from 'react';
 import { getLyrics } from '../../services/api-call';
+import { useParams } from 'react-router-dom';
 
-const useLyrics = ({ match }) => {
-  const [lyric, setLyric] = useState([]);
+const useLyrics = () => {
+  const [lyric, setLyric] = useState({});
+  const { title, name } = useParams();
 
   useEffect(() => {
     if(lyric) {
-      getLyrics(match.params.title, match.params.name)
+      getLyrics(title, name)
         .then(lyric => {
           setLyric(lyric);
         });
     }
   }, []);
 
-  return { lyric };
+  return { lyric, title, name };
 };
 
 export default useLyrics;
