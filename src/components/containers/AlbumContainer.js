@@ -1,21 +1,11 @@
-import React, { useState, useEffect } from 'react';
-import PropTypes from 'prop-types';
+import React, { useState } from 'react';
 import Albums from '../albums/Albums';
-import { getAlbums } from '../../services/api-call';
+import useAlbums from '../hooks/useAlbums';
 
+export default function FindAlbum() {
 
-function FindAlbum({ match }) {
-  const [albums, setAlbums] = useState([]);
   const [page, setPage] = useState(0);
-
-  useEffect(() => {
-    if(albums) {
-      getAlbums(match.params.id, page)
-        .then(albums => {
-          setAlbums(albums);
-        });
-    }
-  }, [page]);
+  const { albums, name } = useAlbums(page);
 
   const decrementPage = () => {
     setPage(page - 1);
@@ -27,18 +17,7 @@ function FindAlbum({ match }) {
 
   return (
     <div>
-      <Albums albums={albums} id={albums.id} name={match.params.name} incrementPage={incrementPage} decrementPage={decrementPage} />
+      <Albums albums={albums} name={name} incrementPage={incrementPage} decrementPage={decrementPage} />
     </div>
   );
 }
-
-FindAlbum.propTypes = {
-  match: PropTypes.shape({
-    params: PropTypes.shape({
-      id: PropTypes.string.isRequired,
-      name: PropTypes.string.isRequired
-    }).isRequired
-  }).isRequired
-};
-
-export default FindAlbum;
