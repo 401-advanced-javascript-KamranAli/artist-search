@@ -1,8 +1,25 @@
+// import React, { Component } from 'react';
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Artists from '../artists/Artists';
 import SearchForm from '../artists/SearchForm';
 import { getArtists } from '../../services/api-call';
+
+function FindArtist() {
+  const [artists, setArtist] = setState([]);
+  const [query, setQuery] = setState('');
+  const [page, setPage] = setState(0);
+
+  useEffect(() => {
+    if(artists) {
+      getArtists(query, page)
+        .then(artists => {
+          setArtist(artists);
+        });
+    }
+  });
+
+}
 
 export default class ArtistContainer extends Component {
 
