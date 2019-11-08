@@ -28,7 +28,7 @@ ArtistCard.propTypes = {
   id: PropTypes.string.isRequired,
   name: PropTypes.string,
   country: PropTypes.string.isRequired,
-  tags: PropTypes.arrayOf(PropTypes.object)
+  tags: PropTypes.arrayOf(PropTypes.string)
 };
 
 export default ArtistCard;

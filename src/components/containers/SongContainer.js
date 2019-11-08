@@ -33,25 +33,3 @@ FindSongs.propTypes = {
     }).isRequired
   }).isRequired
 };
-
-
-//   state = {
-//     songs: []
-//   }
-
-// componentDidMount() {
-// getSongs(this.props.match.params.id)
-//   .then(songs => {
-//     this.setState({ songs });
-//   });
-
-
-//   render() {
-//     const { songs } = this.state;
-//     return (
-//       <>
-//         <Songs songs={songs} name={this.props.match.params.name} />
-//       </>
-//     );
-//   }
-// }

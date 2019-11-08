@@ -25,7 +25,7 @@ Artists.propTypes = {
     id: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
     country: PropTypes.string.isRequired,
-    tags: PropTypes.arrayOf(PropTypes.object)
+    tags: PropTypes.arrayOf(PropTypes.string)
   }))
 };
 

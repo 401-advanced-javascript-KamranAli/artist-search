@@ -11,7 +11,7 @@ const LyricCard = ({ lyric }) => {
 };
 
 LyricCard.propTypes = {
-  lyric: PropTypes.string.isRequired
+  lyric: PropTypes.string
 };
 
 export default LyricCard;

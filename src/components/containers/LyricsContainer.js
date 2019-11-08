@@ -1,33 +1,30 @@
-import React, { Component } from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import LyricCard from '../../components/lyrics/LyricCard';
 import { getLyrics } from '../../services/api-call';
 
-export default class LyricsContainer extends Component {
-  static propTypes = {
-    match: PropTypes.shape({
-      params: PropTypes.shape({
-        title: PropTypes.string,
-        name: PropTypes.string.isRequired,
-      }).isRequired
-    }).isRequired
-  }
+export default function FindLyrics({ match }) {
+  const [lyric, setLyric] = useState([]);
 
-  state = {
-    lyric: {}
-  }
+  useEffect(() => {
+    if(lyric) {
+      getLyrics(match.params.title, match.params.name)
+        .then(lyric => {
+          setLyric(lyric);
+        });
+    }
+  }, []);
 
-  componentDidMount() {
-    getLyrics(this.props.match.params.title, this.props.match.params.name)
-      .then(lyric => {
-        
-        this.setState({ lyric });
-      });
-  }
-
-  render() {
-    return (
-      <LyricCard lyric={this.state.lyric.lyrics}/>
-    );
-  }
+  return (
+    <LyricCard lyric={lyric.lyrics} />
+  );
 }
+
+FindLyrics.propTypes = {
+  match: PropTypes.shape({
+    params: PropTypes.shape({
+      title: PropTypes.string,
+      name: PropTypes.string.isRequired,
+    }).isRequired
+  }).isRequired
+};
