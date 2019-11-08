@@ -14,7 +14,7 @@ export default function FindArtist() {
   const handleSubmit = (event) => {
     event.preventDefault();
     findArtists();
-  }
+  };
 
   const handleChange = ({ target }) => {
     setQuery(target.value);
