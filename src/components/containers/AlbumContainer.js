@@ -3,36 +3,37 @@ import PropTypes from 'prop-types';
 import Albums from '../albums/Albums';
 import { getAlbums } from '../../services/api-call';
 
-function pageReducer(state, action) {
-  switch(action.type) {
-    case 'incrementPage':
-      return { ...state, page: action.payload };
-    case 'decrementPage':
-      return { ...state, page: action.payload };
-    default:
-      return state;
-  }
-}
 
-function findAlbum() {
+function FindAlbum({ match }) {
   const [albums, setAlbums] = useState([]);
-  const [page, setPage] = useReducer(pageReducer, { page: 0 });
+  const [page, setPage] = useState(0);
 
   useEffect(() => {
     if(albums) {
-      getAlbums(albums);
+      getAlbums(match.params.id, page)
+        .then(albums => {
+          setAlbums(albums);
+        });
     }
   }, [page]);
 
   return (
     <div>
-      {/* <Albums albums={albums} id={this.state.albums.id} incrementPage={this.incrementPage} decrementPage={this.decrementPage} name={this.props.match.params.name} /> */}
-      <Albums onClick={() => setAlbums(albums), setPage(page)} />
+      <Albums albums={albums} id={albums.id} name={match.params.name} incrementPage={page} decrementPage={page}  />
     </div>
   );
 }
 
-export default findAlbum;
+FindAlbum.propTypes = {
+  match: PropTypes.shape({
+    params: PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired
+    }).isRequired
+  }).isRequired
+};
+
+export default FindAlbum;
 
 
 // export default class AlbumContainer extends Component {

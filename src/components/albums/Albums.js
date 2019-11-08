@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import AlbumCard from './AlbumCard';
 
 const Albums = ({ albums, incrementPage, decrementPage, name }) => {
-
   const albumElements = albums.map(album => {
     return (
       <li key={album.id}>
