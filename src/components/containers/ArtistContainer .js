@@ -3,20 +3,18 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import Artists from '../artists/Artists';
 import SearchForm from '../artists/SearchForm';
-import { getArtists } from '../../services/api-call';
+import useArtists from '../hooks/useArtists';
 
 export default function FindArtist() {
-  const [artists, setArtist] = useState([]);
   const [query, setQuery] = useState('');
   const [page, setPage] = useState(0);
 
-  const handleSubmit = () => {
+  const { artists, findArtists } = useArtists(query, page);
+
+  const handleSubmit = (event) => {
     event.preventDefault();
-    getArtists(query, page)
-      .then(artists => {
-        setArtist(artists);
-      });
-  };
+    findArtists();
+  }
 
   const handleChange = ({ target }) => {
     setQuery(target.value);
