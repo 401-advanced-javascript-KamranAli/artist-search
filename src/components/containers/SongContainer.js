@@ -1,35 +1,13 @@
-import React, { useState, useEffect } from 'react';
-import PropTypes from 'prop-types';
-import { getSongs } from '../../services/api-call';
+import React from 'react';
 import Songs from '../songs/Songs';
+import useSongs from '../hooks/useSongs';
 
-export default function FindSongs({ match }) {
-  const [songs, setSongs] = useState([]);
-
-  useEffect(() => {
-    if(songs) {
-      getSongs(match.params.id)
-        .then(songs => {
-          setSongs(songs);
-        });
-    }
-  }, []);
-
-
+export default function FindSongs() {
+  const { songs, name } = useSongs();
 
   return (
     <>
-      <Songs songs={songs} name={match.params.name} />
+      <Songs songs={songs} name={name} />
     </>
   );
 }
-
-FindSongs.propTypes = {
-  match: PropTypes.shape({
-    params: PropTypes.shape({
-      title: PropTypes.string,
-      name: PropTypes.string.isRequired,
-      id: PropTypes.string.isRequired
-    }).isRequired
-  }).isRequired
-};
