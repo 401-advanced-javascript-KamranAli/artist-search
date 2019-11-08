@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LyricCard component renders LyricCard 1`] = `
+<div>
+  <pre>
+    asdga
+  </pre>
+</div>
+`;

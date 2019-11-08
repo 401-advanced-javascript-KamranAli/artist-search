@@ -1,0 +1,220 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Artists component renders Artists 1`] = `
+<ul
+  className="Artists"
+>
+  <li
+    key="0383dadf-2a4e-4d10-a46a-e9e041da8eb3"
+  >
+    <ArtistCard
+      area={
+        Object {
+          "id": "8a754a16-0027-3a29-b6d7-2b40ea0481ed",
+          "life-span": Object {
+            "ended": null,
+          },
+          "name": "United Kingdom",
+          "sort-name": "United Kingdom",
+          "type": "Country",
+          "type-id": "06dd0ae4-8c74-30bb-b43d-95dcedf961de",
+        }
+      }
+      begin-area={
+        Object {
+          "id": "f03d09b3-39dc-4083-afd6-159e3f0d462f",
+          "life-span": Object {
+            "ended": null,
+          },
+          "name": "London",
+          "sort-name": "London",
+          "type": "City",
+          "type-id": "6fd8f29a-3d0a-32fc-980d-ea697b69da78",
+        }
+      }
+      country="GB"
+      disambiguation="UK rock group"
+      id="0383dadf-2a4e-4d10-a46a-e9e041da8eb3"
+      isnis={
+        Array [
+          "0000000115265309",
+        ]
+      }
+      life-span={
+        Object {
+          "begin": "1970-06-27",
+          "ended": null,
+        }
+      }
+      name="Queen"
+      score={100}
+      sort-name="Queen"
+      tags={
+        Array [
+          Object {
+            "count": 18,
+            "name": "rock",
+          },
+          Object {
+            "count": 0,
+            "name": "progressive rock",
+          },
+          Object {
+            "count": -1,
+            "name": "70s",
+          },
+          Object {
+            "count": -1,
+            "name": "80s",
+          },
+          Object {
+            "count": -1,
+            "name": "90s",
+          },
+          Object {
+            "count": -1,
+            "name": "pop-rock",
+          },
+          Object {
+            "count": 5,
+            "name": "british",
+          },
+          Object {
+            "count": 0,
+            "name": "uk",
+          },
+          Object {
+            "count": 0,
+            "name": "band",
+          },
+          Object {
+            "count": 5,
+            "name": "hard rock",
+          },
+          Object {
+            "count": 0,
+            "name": "britannique",
+          },
+          Object {
+            "count": 0,
+            "name": "disco",
+          },
+          Object {
+            "count": 3,
+            "name": "glam rock",
+          },
+          Object {
+            "count": -1,
+            "name": "queen family",
+          },
+          Object {
+            "count": 3,
+            "name": "art rock",
+          },
+          Object {
+            "count": 2,
+            "name": "pop rock",
+          },
+          Object {
+            "count": 0,
+            "name": "english",
+          },
+          Object {
+            "count": 0,
+            "name": "united kingdom",
+          },
+          Object {
+            "count": 1,
+            "name": "awesome",
+          },
+          Object {
+            "count": -1,
+            "name": "queen",
+          },
+          Object {
+            "count": 1,
+            "name": "film soundtrack",
+          },
+          Object {
+            "count": -1,
+            "name": "classic pop and rock",
+          },
+          Object {
+            "count": -1,
+            "name": "platinum",
+          },
+          Object {
+            "count": -1,
+            "name": "pop/rock",
+          },
+          Object {
+            "count": 0,
+            "name": "80's",
+          },
+          Object {
+            "count": -1,
+            "name": "90's",
+          },
+          Object {
+            "count": 0,
+            "name": "70's",
+          },
+          Object {
+            "count": -1,
+            "name": "langham 1 studio bbc",
+          },
+          Object {
+            "count": -1,
+            "name": "kind of magic",
+          },
+          Object {
+            "count": 1,
+            "name": "sa-town anthem",
+          },
+          Object {
+            "count": 1,
+            "name": "server name",
+          },
+          Object {
+            "count": 1,
+            "name": "rx27",
+          },
+        ]
+      }
+      type="Group"
+      type-id="e431f5f6-b5d2-343d-8b36-72607fffb74b"
+    />
+  </li>
+  <li
+    key="5eecaf18-02ec-47af-a4f2-7831db373419"
+  >
+    <ArtistCard
+      area={
+        Object {
+          "id": "489ce91b-6658-3307-9877-795b68554c98",
+          "life-span": Object {
+            "ended": null,
+          },
+          "name": "United States",
+          "sort-name": "United States",
+          "type": "Country",
+          "type-id": "06dd0ae4-8c74-30bb-b43d-95dcedf961de",
+        }
+      }
+      country="US"
+      disambiguation="US rapper"
+      id="5eecaf18-02ec-47af-a4f2-7831db373419"
+      life-span={
+        Object {
+          "ended": null,
+        }
+      }
+      name="Queen"
+      score={79}
+      sort-name="Queen"
+      type="Person"
+      type-id="b6e035f4-3ce9-331c-97df-83397230b0df"
+    />
+  </li>
+</ul>
+`;

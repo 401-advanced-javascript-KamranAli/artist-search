@@ -1,0 +1,116 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Albums component renders Albums 1`] = `
+<Fragment>
+  <button
+    type="button"
+  >
+    Back
+  </button>
+  <button
+    type="button"
+  >
+    Next
+  </button>
+  <ul>
+    <li
+      key="053b7800-979f-4e7d-a15f-9f9fe2156687"
+    >
+      <AlbumCard
+        asin="B00SVNM7FO"
+        barcode={null}
+        country="US"
+        cover-art-archive={
+          Object {
+            "artwork": true,
+            "back": false,
+            "count": 2,
+            "darkened": false,
+            "front": false,
+          }
+        }
+        date="1974-02-14"
+        disambiguation=""
+        id="053b7800-979f-4e7d-a15f-9f9fe2156687"
+        packaging="Cardboard/Paper Sleeve"
+        packaging-id="f7101ce3-0384-39ce-9fde-fbbd0044d35f"
+        quality="normal"
+        release-events={
+          Array [
+            Object {
+              "area": Object {
+                "disambiguation": "",
+                "id": "489ce91b-6658-3307-9877-795b68554c98",
+                "iso-3166-1-codes": Array [
+                  "US",
+                ],
+                "name": "United States",
+                "sort-name": "United States",
+              },
+              "date": "1974-02-14",
+            },
+          ]
+        }
+        status="Official"
+        status-id="4e304316-386d-3409-af2e-78857eec5cfe"
+        text-representation={
+          Object {
+            "language": "eng",
+            "script": "Latn",
+          }
+        }
+        title="Liar"
+      />
+    </li>
+    <li
+      key="1783da6a-9315-3602-a488-1738eb733a0f"
+    >
+      <AlbumCard
+        asin={null}
+        barcode=""
+        country="US"
+        cover-art-archive={
+          Object {
+            "artwork": true,
+            "back": false,
+            "count": 1,
+            "darkened": false,
+            "front": true,
+          }
+        }
+        date="1973-09-04"
+        disambiguation=""
+        id="1783da6a-9315-3602-a488-1738eb733a0f"
+        packaging="Cardboard/Paper Sleeve"
+        packaging-id="f7101ce3-0384-39ce-9fde-fbbd0044d35f"
+        quality="normal"
+        release-events={
+          Array [
+            Object {
+              "area": Object {
+                "disambiguation": "",
+                "id": "489ce91b-6658-3307-9877-795b68554c98",
+                "iso-3166-1-codes": Array [
+                  "US",
+                ],
+                "name": "United States",
+                "sort-name": "United States",
+              },
+              "date": "1973-09-04",
+            },
+          ]
+        }
+        status="Official"
+        status-id="4e304316-386d-3409-af2e-78857eec5cfe"
+        text-representation={
+          Object {
+            "language": "eng",
+            "script": "Latn",
+          }
+        }
+        title="Queen"
+      />
+    </li>
+  </ul>
+</Fragment>
+`;

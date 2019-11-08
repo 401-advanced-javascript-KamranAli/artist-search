@@ -47,10 +47,6 @@
       "error",
       "never"
     ],
-    "eol-last": [
-      "error",
-      "always"
-    ],
     "keyword-spacing": [
       "error",
       {

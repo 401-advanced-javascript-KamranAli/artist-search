@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AlbumCard component renders AlbumCard 1`] = `
+<div
+  className="AlbumCard"
+  key="asdg"
+>
+  <Link
+    to="/songs/asdg/asdh"
+  >
+    <p>
+      adshasdh
+    </p>
+  </Link>
+  <img
+    src="adsh"
+  />
+</div>
+`;

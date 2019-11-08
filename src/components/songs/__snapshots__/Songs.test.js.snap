@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Songs component renders Songs 1`] = `
+<ul>
+  <li
+    key="1b687aec-3659-4960-976f-93ff4e7ac4a9"
+  >
+    <SongCard
+      disambiguation=""
+      id="1b687aec-3659-4960-976f-93ff4e7ac4a9"
+      length={385800}
+      name="adsg"
+      title="Liar"
+      video={false}
+    />
+  </li>
+  <li
+    key="26956d0b-38cf-4219-9807-1975e4b5ef7b"
+  >
+    <SongCard
+      disambiguation=""
+      id="26956d0b-38cf-4219-9807-1975e4b5ef7b"
+      length={108373}
+      name="adsg"
+      title="Modern Times Rock ’n’ Roll"
+      video={false}
+    />
+  </li>
+</ul>
+`;

@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SongCard component renders SongCard 1`] = `
+<div
+  key="asdgadg"
+>
+  <Link
+    to="/lyrics/asdg/adsgadsg"
+  >
+    <p>
+      adsgadsg
+    </p>
+  </Link>
+</div>
+`;

@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ArtistCard component renders ArtistCard 1`] = `
+<div
+  className="ArtistCard"
+>
+  <Link
+    to="/albums/adsg/adsg"
+  >
+    <p>
+      adsg
+    </p>
+  </Link>
+  <p>
+    adsg
+  </p>
+  <p
+    key="0"
+  >
+    <Component />
+  </p>
+  <p
+    key="1"
+  >
+    <Component />
+  </p>
+  <p
+    key="2"
+  >
+    <Component />
+  </p>
+  <p
+    key="3"
+  >
+    <Component />
+  </p>
+</div>
+`;
