@@ -1,5 +1,5 @@
 // import React, { Component } from 'react';
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import Artists from '../artists/Artists';
 import SearchForm from '../artists/SearchForm';

@@ -1,37 +1,57 @@
-import React, { Component } from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { getSongs } from '../../services/api-call';
 import Songs from '../songs/Songs';
 
-export default class SongsContainer extends Component {
+export default function FindSongs({ match }) {
+  const [songs, setSongs] = useState([]);
 
-  static propTypes = {
-    match: PropTypes.shape({
-      params: PropTypes.shape({
-        title: PropTypes.string,
-        name: PropTypes.string.isRequired,
-        id: PropTypes.string.isRequired
-      }).isRequired
-    }).isRequired
-  }
+  useEffect(() => {
+    if(songs) {
+      getSongs(match.params.id)
+        .then(songs => {
+          setSongs(songs);
+        });
+    }
+  }, []);
 
-  state = {
-    songs: []
-  }
 
-  componentDidMount() {
-    getSongs(this.props.match.params.id)
-      .then(songs => {
-        this.setState({ songs });
-      });
-  }
 
-  render() {
-    const { songs } = this.state;
-    return (
-      <>
-        <Songs songs={songs} name={this.props.match.params.name} />
-      </>
-    );
-  }
+  return (
+    <>
+      <Songs songs={songs} name={match.params.name} />
+    </>
+  );
 }
+
+FindSongs.propTypes = {
+  match: PropTypes.shape({
+    params: PropTypes.shape({
+      title: PropTypes.string,
+      name: PropTypes.string.isRequired,
+      id: PropTypes.string.isRequired
+    }).isRequired
+  }).isRequired
+};
+
+
+//   state = {
+//     songs: []
+//   }
+
+// componentDidMount() {
+// getSongs(this.props.match.params.id)
+//   .then(songs => {
+//     this.setState({ songs });
+//   });
+
+
+//   render() {
+//     const { songs } = this.state;
+//     return (
+//       <>
+//         <Songs songs={songs} name={this.props.match.params.name} />
+//       </>
+//     );
+//   }
+// }
